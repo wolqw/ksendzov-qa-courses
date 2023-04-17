@@ -70,6 +70,7 @@ curl -v  http://162.55.220.72:5005/terminal-hw-request
 touch scr.sh
 (if u use linux - chmod a+x scr.sh)
 vim scr.sh
+нажать i
 
 #!/bin/bash
 #3) Зайти в папку
