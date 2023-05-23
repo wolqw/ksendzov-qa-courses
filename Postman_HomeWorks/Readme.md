@@ -7,3 +7,4 @@
      They can collaborate on API testing and ensure that everyone has access to the latest test data.
 - 5. Load testing: Postman can be used to create load tests by sending multiple requests to an API endpoint and analyzing the response time and system performance. 
      Testers can simulate real-world scenarios and performance metrics to improve API performance.
+![Postman] (https://secure.meetupstatic.com/photos/member/3/e/c/4/member_295636068.jpeg)
