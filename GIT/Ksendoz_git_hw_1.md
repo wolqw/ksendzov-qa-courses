@@ -53,7 +53,7 @@
 
 ## TXT
 >1. Создать внешний репозиторий c названием TXT.                         `https://github.com/wolqw/TXT`
->2. Клонировать репозиторий TXT на локальный компьютер.                  `$ git clone https://github.com/wolqw/TXT.`git
+>2. Клонировать репозиторий TXT на локальный компьютер.                  `$ git clone https://github.com/wolqw/TXT.git`
 >3. Внутри локального TXT создать файл “new.txt”.                        `$ cd TXT && > new.txt`
 >4. Добавить файл под гит.                                               `$ git add new.txt`
 >5. Закоммитить файл.                                                    `$ git commit -m "mode_1"`
