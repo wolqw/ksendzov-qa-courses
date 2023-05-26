@@ -24,11 +24,11 @@ $ git commit -m "pushbranches"
 
 >## 2. Запушить все ветки на внешний репозиторий
 ```
-$ git push -u origin master Bag_Reports Charles SQL Postman Mobile_testing Jmeter CheckLists
+$ git push -u origin BugReports Charles SQL Postman MobileTesting Jmeter CheckLists
 ```
 >## 3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
 ```
-$ git checkout Bag_Reports | cat >> bugreport_id_1.txt
+$ git checkout BugReports | cat >> bugreport_id_1.txt
 Title
 Description
 StepsToReproduce
@@ -43,10 +43,10 @@ $ git add.
 $ git commit -m "bug"
 $ git push
 ```
->## 5. Вмержить ветку Bag Reports в Main.
+>## 5. Вмержить ветку BugReports в Main.
 ```
 $ git checkout -
-$ git merge Bag_Reports
+$ git merge BugReports
 ```
 >## 6. Запушить main на внешний репозиторий.
 ```
