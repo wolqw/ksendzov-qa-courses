@@ -26,7 +26,7 @@ $ git commit -m "pushbranches"
 ```
 $ git push -u origin BugReports Charles SQL Postman MobileTesting Jmeter CheckLists
 ```
->## 3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+>## 3. В ветке BugReports сделать текстовый документ со структурой баг репорта
 ```
 $ git checkout BugReports | cat >> bugreport_id_1.txt
 Title
