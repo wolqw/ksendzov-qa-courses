@@ -75,5 +75,7 @@ $ git push
 
 >## 10. Синхронизировать Внешнюю и Локальную ветки Main.
 ```
+git checkput main
+git fetch
 git pull
 ```
