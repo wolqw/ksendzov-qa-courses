@@ -13,7 +13,7 @@ Create Github repo branches_hw_git_2
 $ git clone https://github.com/wolqw/branches_hw_git_2.git
 $ git branch Postman     
 $ git branch Jmeter 
-$ git branch Bag_Reports
+$ git branch BugReports
 $ git branch SQL
 $ git branch CheckLists
 $ git branch Charles
