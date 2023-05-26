@@ -28,7 +28,8 @@ $ git push -u origin BugReports Charles SQL Postman MobileTesting Jmeter CheckLi
 ```
 >## 3. В ветке BugReports сделать текстовый документ со структурой баг репорта
 ```
-$ git checkout BugReports | cat >> bugreport_id_1.txt
+$ git checkout BugReports
+cat >> bugreport_id_1.txt
 Title
 Description
 StepsToReproduce
