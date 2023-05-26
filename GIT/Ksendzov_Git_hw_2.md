@@ -51,6 +51,8 @@ $ git merge BugReports
 ```
 >## 6. Запушить main на внешний репозиторий.
 ```
+$ git add.
+$ git commit -m "merged_BugReports"
 $ git push
 ```
 >## 7. В ветке CheckLists набросать структуру чек листа.
