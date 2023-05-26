@@ -8,15 +8,16 @@
 - Charles
 - Mobile testing
 
-
-Create folder `branches_hw_git_2`
-
 ```
-$ git init
-$ git commit --allow-empty -m "Initial commit"
-$ git branch Postman Jmeter Bag_Reports SQL CheckLists Charles Mobile_testing
- create Github repo branches_hw_git_2
-$ git remote add origin https://github.com/wolqw/branches_hw_git_2.git
+Create Github repo branches_hw_git_2
+$ git clone https://github.com/wolqw/branches_hw_git_2.git
+$ git branch Postman     
+$ git branch Jmeter 
+$ git branch Bag_Reports
+$ git branch SQL
+$ git branch CheckLists
+$ git branch Charles
+$ git branch Mobile_testing
 $ git add .
 $ git commit -m "pushbranches"
 ```
