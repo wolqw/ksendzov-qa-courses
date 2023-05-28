@@ -26,96 +26,96 @@ pm.test("Проверяем, что в body приходит правильны�
 > var respJson = pm.response.json();
 > 4. Проверить, что name в ответе равно name s request (name вбить руками.)
 >pm.test("Person name is YurQA", function () {
-  pm.expect(respJson.name).to.eql("YurQA");
+>  pm.expect(respJson.name).to.eql("YurQA");
+> });
+# 5. Проверить, что age в ответе равно age s request (age вбить руками.)
+> var age = +respJson.age
+> pm.test("Person age is 33", function () {
+>  pm.expect(age).to.eql(33);
+> });
+# 6. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
+> pm.test("Person salary is 10000", function () {
+>  pm.expect(respJson.salary).to.eql(10000);
+> });
+# 7. Спарсить request.
+> var reqData = request.data;
+# 8. Проверить, что name в ответе равно name s request (name забрать из request.)
+> pm.test('request age is equal response age', function(){
+>    pm.expect(respJson.name).to.equal(reqData.name)
+> });
+# 9. Проверить, что age в ответе равно age s request (age забрать из request.)
+> pm.test('Request age is equal response age', function(){
+>    pm.expect(respJson.age).to.equal(reqData.age)
+> });
+# 10. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
+> var RQsalary = +reqJson.salary
+> pm.test('Request salary is equal response salary', function(){
+>    pm.expect(respJson.salary).to.equal(RQsalary)
 });
-5. Проверить, что age в ответе равно age s request (age вбить руками.)
-var age = +respJson.age
-pm.test("Person age is 33", function () {
-  pm.expect(age).to.eql(33);
-});
-6. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
-pm.test("Person salary is 10000", function () {
-  pm.expect(respJson.salary).to.eql(10000);
-});
-7. Спарсить request.
-var reqData = request.data;
-8. Проверить, что name в ответе равно name s request (name забрать из request.)
-pm.test('request age is equal response age', function(){
-    pm.expect(respJson.name).to.equal(reqData.name)
-});
-9. Проверить, что age в ответе равно age s request (age забрать из request.)
-pm.test('Request age is equal response age', function(){
-    pm.expect(respJson.age).to.equal(reqData.age)
-});
-10. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
-var RQsalary = +reqJson.salary
-pm.test('Request salary is equal response salary', function(){
-    pm.expect(respJson.salary).to.equal(RQsalary)
-});
-11. Вывести в консоль параметр family из response.
-console.log(pm.response.json().family);
-12. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
-var req_salary_1_5 = RQsalary * 4
-pm.test("u_salary_1_5_year is equal request salary multiplied by 4", function(){
-    pm.expect(respJson.family.u_salary_1_5_year).to.eql(req_salary_1_5)
-})
+# 11. Вывести в консоль параметр family из response.
+> console.log(pm.response.json().family);
+# 12. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
+> var req_salary_1_5 = RQsalary * 4
+> pm.test("u_salary_1_5_year is equal request salary multiplied by 4", function(){
+>     pm.expect(respJson.family.u_salary_1_5_year).to.eql(req_salary_1_5)
+>})
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-http://162.55.220.72:5005/object_info_3
-1. Отправить запрос.
+# http://162.55.220.72:5005/object_info_3
+# 1. Отправить запрос.
 GET http://162.55.220.72:5005/object_info_3?name=YurQa&age=33&salary=100000
-2. Статус код 200
+#2. Статус код 200
 pm.test("Status code is 200", function () {
     pm.response.to.have.status(200);
 });
-3. Спарсить response body в json.
+# 3. Спарсить response body в json.
 var jsonData_1 = JSON.parse(responseBody);
-4. Спарсить request.
+# 4 Спарсить request.
 var reqData_1 = pm.request.url.query.toObject();
-5. Проверить, что name в ответе равно name s request (name забрать из request.)
+# 5. Проверить, что name в ответе равно name s request (name забрать из request.)
 pm.test("request name is equal response name", function(){
     pm.expect(jsonData_1.name).to.eql(reqData_1.name);
 });
-6. Проверить, что age в ответе равно age s request (age забрать из request.)
+# 6. Проверить, что age в ответе равно age s request (age забрать из request.)
 pm.test("request age is equal response age", function(){
     pm.expect(jsonData_1.age).to.eql(reqData_1.age);
 });
-7. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
+# 7. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
 var RQsalary = + reqData_1.salary;
 pm.test("request salary is equal response salary", function(){
     pm.expect(jsonData_1.salary).to.eql(RQsalary);
 });
-8. Вывести в консоль параметр family из response.
+# 8. Вывести в консоль параметр family из response.
 console.log(pm.response.json().family);
-9. Проверить, что у параметра dog есть параметры name.
+# 9. Проверить, что у параметра dog есть параметры name.
 pm.test("have a dog the Name parameter?", function(){
     pm.expect(jsonData_1.family.pets.dog).to.have.property('name');
 });
-10. Проверить, что у параметра dog есть параметры age.
+# 10. Проверить, что у параметра dog есть параметры age.
 pm.test("have a dog the Age parameter?", function(){
     pm.expect(jsonData_1.family.pets.dog).to.have.property('age');
 });
-11. Проверить, что параметр name имеет значение Luky.
+# 11. Проверить, что параметр name имеет значение Luky.
 pm.test("Does the dog name is Luky????", function(){
     pm.expect(jsonData_1.family.pets.dog.name).to.eql('Luky')
 })
-12. Проверить, что параметр age имеет значение 4.
+# 12. Проверить, что параметр age имеет значение 4.
 pm.test("Does age is 4?", function(){
     pm.expect(jsonData_1.family.pets.dog.age).to.eql(4)
 })
-Или
-for (i = 0; i < RsData3.salary.length; i++){
-    console.log ("salary = ", RsData3.salary[i])
-}
 
-http://162.55.220.72:5005/object_info_4
-1. Отправить запрос.
+>for (i = 0; i < RsData3.salary.length; i++){
+>    console.log ("salary = ", RsData3.salary[i])
+>}
+
+> http://162.55.220.72:5005/object_info_4
+>1. Отправить запрос.
 GET http://162.55.220.72:5005/object_info_4?name=YurQA&age=33&salary=100000
-2. Статус код 200
-pm.test("Status code is 200", function () {
-    pm.response.to.have.status(200);
-});
-3. Спарсить response body в json.
+> 2. Статус код 200
+> pm.test("Status code is 200", function () {
+>    pm.response.to.have.status(200);
+> });
+# 3. Спарсить response body в json.
 var RsData3 = pm.response.json();
 4. Спарсить request.
 var RqDate3 =  pm.request.url.query.toObject();
