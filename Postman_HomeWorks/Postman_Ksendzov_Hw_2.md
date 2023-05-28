@@ -1,31 +1,31 @@
 ## Запрос №1
 ## http://162.55.220.72:5005/first
-1. Отправить запрос:
+> 1. Отправить запрос:
 GET http://162.55.220.72:5005/first
-2. Статус код 200:
+> 2. Статус код 200:
 pm.test("Status code is 200", function () {
     pm.response.to.have.status(200);
 });
-3. Проверить, что в body приходит правильный string.
+> 3. Проверить, что в body приходит правильный string.
 pm.test("Проверяем, что в body приходит правильный string", function () {
     pm.expect(pm.response.text()).to.eql("This is the first responce from server!");
 });
-Запрос №2
-http://162.55.220.72:5005/user_info_3
-1. Отправить запрос.
-POST http://162.55.220.72:5005/user_info_3
-form-data:
-name: YurQA
-age: 33
-salary: 10000
-2. Статус код 200.
-pm.test("Status code is 200", function () {
-    pm.response.to.have.status(200);
+# Запрос №2
+> http://162.55.220.72:5005/user_info_3
+> 1. Отправить запрос.
+> POST http://162.55.220.72:5005/user_info_3
+> form-data:
+> name: YurQA
+> age: 33
+> salary: 10000
+> 2. Статус код 200.
+> pm.test("Status code is 200", function () {
+>    pm.response.to.have.status(200);
 });
-3. Спарсить response body в json.
-var respJson = pm.response.json();
-4. Проверить, что name в ответе равно name s request (name вбить руками.)
-pm.test("Person name is YurQA", function () {
+# 3. Спарсить response body в json.
+> var respJson = pm.response.json();
+> 4. Проверить, что name в ответе равно name s request (name вбить руками.)
+>pm.test("Person name is YurQA", function () {
   pm.expect(respJson.name).to.eql("YurQA");
 });
 5. Проверить, что age в ответе равно age s request (age вбить руками.)
