@@ -1,4 +1,5 @@
-﻿Termial. HW_2
+```
+Termial. HW_2
 1. Сделать папку dir_1:
 $ mkdir dir_1
 
@@ -54,27 +55,26 @@ $ cat >> ../tf_2.txt
 the seConD 2
 
 14. Сделать текстовый файл tf_4.txt в котором будет 15 строк.
-$for i in {1..15}; do echo "$i" >> tf_4.txt; done
+$ for i in {1..15}; do echo "$i" >> tf_4.txt; done
 ИЛИ
-$seq 15 | cat > tf_4.txt
+$ seq 15 | cat > tf_4.txt
 
 15. Сделать текстовый файл tF_5.txt в котором будет 13 строк.
-$seq 13 | cat > tF_5.txt
+$ seq 13 | cat > tF_5.txt
 
 16. Вывести список всех файлов в папке.
-$ls -1
+$ ls -1
 
 17. Выйти из папки inner_dir_1
-$cd ..
+$ cd ..
 18. Вывести содержимое файла tf_3.txt в терминал.
 tail -n +1 inner_dir_1/tf_3.txt
 или
-$cat inner_dir_1/tf_4.txt
+$ cat inner_dir_1/tf_4.txt
 
 19. Найти путь к файлу tf_4.txt
-$ find -type f -name "*tf*"
-
-$find -name tf_4.txt
+$ find -name "*tf*"
+$ find -name tf_4.txt
 $ find -type f -iname "tf_4.txt"
 
 20. Очистить файл tf_4.txt от содержимого без удаления самого файла:
@@ -144,5 +144,5 @@ $ grep -rlw sec | xargs rm
 40. Просто вывести в терминал строку “Good job!!”
 $ name="Good"
 echo "${name} job!!"
-
+```
 
