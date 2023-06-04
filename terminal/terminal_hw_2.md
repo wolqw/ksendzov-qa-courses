@@ -75,7 +75,7 @@ $ find -name tf_4.txt
 $ readlink -f tf_4.txt
 
 20. Очистить файл tf_4.txt от содержимого без удаления самого файла:
-$ > inner_dir_1/tf_4.txt
+$ echo -n > inner_dir_1/tf_4.txt
 
 21. Найти путь к файлам у которых есть “tf” в названии:
 $ find -type f -name "*tf*"
