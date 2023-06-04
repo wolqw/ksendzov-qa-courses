@@ -40,7 +40,7 @@ the second 2
 
 10.Через cat добавить в текстовый файл tf_3.txt строку  “the sec 2”:
 $ cat >> tf_3.txt
-the sec 3
+the sec 2
 
 11.Через cat добавить в текстовый файл tf_2.txt строку “the sec 3”:
 $ cat >> ../tf_2.txt
