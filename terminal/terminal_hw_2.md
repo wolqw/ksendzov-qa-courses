@@ -87,14 +87,13 @@ $ find -type f -iname "*tf*"
 $ grep -n "sec" *
 
 24. Найти строки в файлах где есть комбинация букв “sec” в любом регистре в текущей папке:
-$ grep -in "sec" * - maxdepth 1
-$ find . -type f -name "*.txt" -exec grep -i -n "sec" {} \;
+$ grep -ni "sec" *
 
 25. Найти строки в файлах где есть только комбинация букв “sec” в текущей папке:
-$ grep -n 'sec' * - maxdepth 1
+$ grep -w "sec" *
 
 26. Найти строки в файлах где есть только комбинация букв “sec” в любом регистре в текущей папке:
-$ grep -ni 'sec' * - maxdepth 1
+$ grep -nwi 'sec' * 
 
 27. Найти строки в файлах где есть комбинация букв “second” в текущей папке:
 $ grep -n "second" * - maxdepth 1
