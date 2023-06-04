@@ -55,15 +55,13 @@ $ cat >> ../tf_2.txt
 the seConD 2
 
 14. Сделать текстовый файл tf_4.txt в котором будет 15 строк.
-$ for i in {1..15}; do echo "$i" >> tf_4.txt; done
-ИЛИ
 $ seq 15 | cat > tf_4.txt
 
 15. Сделать текстовый файл tF_5.txt в котором будет 13 строк.
 $ seq 13 | cat > tF_5.txt
 
 16. Вывести список всех файлов в папке.
-$ ls -1
+$ ls -la
 
 17. Выйти из папки inner_dir_1
 $ cd ..
@@ -73,19 +71,17 @@ tail -n +1 inner_dir_1/tf_3.txt
 $ cat inner_dir_1/tf_4.txt
 
 19. Найти путь к файлу tf_4.txt
-$ find -name "*tf*"
 $ find -name tf_4.txt
-$ find -type f -iname "tf_4.txt"
+$ readlink -f tf_4.txt
 
 20. Очистить файл tf_4.txt от содержимого без удаления самого файла:
 $ > inner_dir_1/tf_4.txt
 
 21. Найти путь к файлам у которых есть “tf” в названии:
-$find -type f -name "*tf*"
+$ find -type f -name "*tf*"
 
 22. Найти путь к файлам у которых есть “tf” в названии и буквы в любом регистре:
-$find -type f -iname "*tf*"
-$ find -name "*tf*" -exec sh -c 'grep -iq "[[:lower:]][[:upper:]]\|[[:upper:]][[:lower:]]" {} && echo {}' \;
+$ find -type f -iname "*tf*"
 
 23. Найти строки в файлах где есть комбинация букв “sec” в текущей папке:
 $ grep -r "sec" --include="*.txt"
