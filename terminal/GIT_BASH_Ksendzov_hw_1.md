@@ -1,5 +1,6 @@
  #Юрий Волков 34 Группа @tomkcat#
- Первая часть первого ДЗ
+```
+Первая часть первого ДЗ
 Linux terminal (GitBash) commands
 
 
@@ -94,3 +95,4 @@ mv fldr_3/file1.txt fldr_3/file5.json fldr_2/
 нажать
 esc
 :wq
+```
