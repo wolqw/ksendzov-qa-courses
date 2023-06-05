@@ -85,7 +85,7 @@ $ find -type f -name "*tf*"
 $ find -type f -iname "*tf*"
 
 23. Найти строки в файлах где есть комбинация букв “sec” в текущей папке:
-$ grep -n "sec" *
+$ grep -sn "sec" *
 
 24. Найти строки в файлах где есть комбинация букв “sec” в любом регистре в текущей папке:
 $ grep -ni "sec" *
@@ -139,6 +139,6 @@ $ grep -rlw sec | xargs rm
 
 40. Просто вывести в терминал строку “Good job!!”
 $ name="Good"
-echo "${name} job!!"
+echo "${name} job!"!
 ```
 
