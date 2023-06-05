@@ -106,7 +106,7 @@ $ grep -ni "second" *
 $ grep -n 'second' ./*/
 
 30. Найти только путь и название файла в строках которых есть комбинация букв “second” в текущей папке.
-$ grep -ls "second" * 
+$ grep -lsr "second" * 
 
 31. Найти все строки во всех файлах где нет комбинации “second”:
 $ grep -rnv "second"
@@ -121,17 +121,18 @@ $ tail -n 4 tf_2.txt
 $ head -n 4 tf_2.txt
 
 35. Команда в одну строку. Создать папку и создать текстовый файл с содержиммым.
-$ mkdir folder1 | echo "just a new line for "$'\n'" 34 group padawans" > folder1/file9.txt
-$ mkdir inner_dir_2 && cat >> inner_dir_2/tf_6.txt 
+$ mkdir inner_dir_2 && cat >> inner_dir_2/tf_6.txt
 
 36. Команда в одну строку. Переместить в любую одну папку текстовые файлы у которых в содержимом есть слово “sec”:
-$ grep -lr sec ./* | xargs mv --backup=numbered -t ./moved
+$ mkdir moved
+$ grep -lwr sec * | xargs mv -t moved
 
 37. Команда в одну строку. Скопировать в любую одну папку текстовые файлы у которых в содержимом есть слово “sec”
-$ grep -lr sec ./* | xargs cp --backup=numbered -t ./copied
+$ mkdir copied
+$ grep -lwr sec | xargs cp -t copied
 
 38. Команда в одну строку. Найти все строки c “sec” во всех текстовых файлах, скопировать и вставить эти строки в один новый созданный текстовый файл.
-$ grep -r -i sec >> sec.txt
+$ grep -ri sec >> sec.txt
 
 39. Команда в одну строку. Удалить текстовые файлы у которых в содержимом есть слово “sec”
 $ grep -lr sec | xargs rm
