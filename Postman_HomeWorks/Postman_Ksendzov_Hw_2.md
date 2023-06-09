@@ -165,85 +165,83 @@
 > pm.environment.set("salary", env_salary);
 ### 21. Написать цикл который выведет в консоль по порядку элементы списка из параметра salary.
 > Rsdata3.salary.forEach(salary => console.log(salary))
-
 ***
-```
-for (i = 0; i < RsData3.salary.length; i++){
-    console.log ("salary = ", RsData3.salary[i])
-}
+> for (i = 0; i < RsData3.salary.length; i++){
+>    console.log ("salary = ", RsData3.salary[i])
+> }
 ////////////////////////////////////////////////////////////////////////////////////////////////
-http://162.55.220.72:5005/user_info_2
-1. Вставить параметр salary из окружения в request:
-{{salary}}
-2. Вставить параметр age из окружения в age:
-{{age}}
-3. Вставить параметр name из окружения в name:
-{{name}}
-4. Отправить запрос.
-succses
-5. Статус код 200
-pm.test("Status code is 200", function () {
-    pm.response.to.have.status(200);
-});
-6. Спарсить response body в json.
-var jsonData5 = pm.response.json();
-7. Спарсить request.
-var params = request.data;
-8. Проверить, что json response имеет параметр start_qa_salary:
-pm.test("Проверить, что json response имеет параметр start_qa_salary", function () {
-    pm.expect(jsonData5).to.have.property("start_qa_salary");
-});
-9. Проверить, что json response имеет параметр qa_salary_after_6_months:
-pm.test("Проверить, что json response имеет qa_salary_after_6_months", function () {
-    pm.expect(jsonData5).to.have.property("qa_salary_after_6_months");
-});
-10. Проверить, что json response имеет параметр qa_salary_after_12_months:
-pm.test("Проверить, что json response имеет qa_salary_after_12_months", function () {
-    pm.expect(jsonData5).to.have.property("qa_salary_after_12_months");
-});
-11. Проверить, что json response имеет параметр qa_salary_after_1.5_year:
-pm.test("Проверить, что json response имеет qa_salary_after_1.5_year", function () {
-    pm.expect(jsonData5).to.have.property("qa_salary_after_1.5_year");
-});
-12. Проверить, что json response имеет параметр qa_salary_after_3.5_years:
-pm.test("Проверить, что json response имеет qa_salary_after_3.5_years", function () {
-    pm.expect(jsonData5).to.have.property("qa_salary_after_3.5_years");
-});
-13. Проверить, что json response имеет параметр person:
-pm.test("Проверить, что json response имеет person", function () {
-    pm.expect(jsonData5).to.have.property("person");
-});
-14. Проверить, что параметр start_qa_salary равен salary из request (salary забрать из request.):
-pm.test("Проверить, что параметр start_qa_salary равен salary из request (salary забрать из request", function () {
-    pm.expect(jsonData5.start_qa_salary).to.eql(+params.salary);
-});
-15. Проверить, что параметр qa_salary_after_6_months равен salary*2 из request (salary забрать из request.):
-pm.test("Проверить, что параметр start_qa_salary равен salary из request (salary забрать из request", function () {
-    pm.expect(jsonData5.start_qa_salary).to.eql(+params.salary);
-});
-16. Проверить, что параметр qa_salary_after_12_months равен salary*2.7 из request (salary забрать из request.):
-pm.test("Проверить, что параметр qa_salary_after_12_months равен salary*2.7 из request (salary забрать из request", function () {
-    pm.expect(jsonData5.qa_salary_after_12_months).to.eql(+params.salary*2.7);
-});
-17. Проверить, что параметр qa_salary_after_1.5_year равен salary*3.3 из request (salary забрать из request.):
-pm.test("Проверить, что параметр qa_salary_after_1.5_year равен salary*3.3 из request (salary забрать из request", function () {
-    pm.expect(jsonData5['qa_salary_after_1.5_year']).to.eql(+params.salary*3.3);
-});
-18. Проверить, что параметр qa_salary_after_3.5_years равен salary*3.8 из request (salary забрать из request.):
-pm.test("Проверить, что параметр qa_salary_after_3.5_years равен salary*3.8 из request (salary забрать из request.)", function(){
-    pm.expect(jsonData5['qa_salary_after_3.5_years']).to.equal(+params.salary*3.8)
-})
-19. Проверить, что в параметре person, 1-й элемент из u_name равен salary из request (salary забрать из request.):
-pm.test("Проверить, что в параметре person, 1-й элемент из u_name равен salary из request (salary забрать из request.", function() {
-    pm.expect(jsonData5.person.u_name[1]).to.eql(+params.salary);
-})
-20. Проверить, что что параметр u_age равен age из request (age забрать из request.):
-pm.test("Проверить, что что параметр u_age равен age из request (age забрать из request.):", function(){ 
-    pm.expect(jsonData5.person.u_age).to.equal(+params.age)
-})
-21. Проверить, что параметр u_salary_5_years равен salary*4.2 из request (salary забрать из request.):
-pm.test("Проверить, что параметр u_salary_5_years равен salary*4.2 из request (salary забрать из request.)", function(){
-    pm.expect(jsonData5.person.u_salary_5_years).to.eql(+params.salary*4.2)
-});
-22. ***Написать цикл который выведет в консоль по порядку элементы списка из параметра person.
-```
+### http://162.55.220.72:5005/user_info_2
+### 1. Вставить параметр salary из окружения в request:
+> {{salary}}
+### 2. Вставить параметр age из окружения в age:
+> {{age}}
+### 3. Вставить параметр name из окружения в name:
+> {{name}}
+### 4. Отправить запрос.
+> succses
+### 5. Статус код 200
+> pm.test("Status code is 200", function () {
+>    pm.response.to.have.status(200);
+> });
+### 6. Спарсить response body в json.
+> var jsonData5 = pm.response.json();
+### 7. Спарсить request.
+> var params = request.data;
+### 8. Проверить, что json response имеет параметр start_qa_salary:
+> pm.test("Проверить, что json response имеет параметр start_qa_salary", function () {
+>    pm.expect(jsonData5).to.have.property("start_qa_salary");
+> });
+### 9. Проверить, что json response имеет параметр qa_salary_after_6_months:
+> pm.test("Проверить, что json response имеет qa_salary_after_6_months", function () {
+>    pm.expect(jsonData5).to.have.property("qa_salary_after_6_months");
+> });
+### 10. Проверить, что json response имеет параметр qa_salary_after_12_months:
+> pm.test("Проверить, что json response имеет qa_salary_after_12_months", function () {
+>    pm.expect(jsonData5).to.have.property("qa_salary_after_12_months");
+> });
+### 11. Проверить, что json response имеет параметр qa_salary_after_1.5_year:
+> pm.test("Проверить, что json response имеет qa_salary_after_1.5_year", function () {
+>    pm.expect(jsonData5).to.have.property("qa_salary_after_1.5_year");
+>});
+### 12. Проверить, что json response имеет параметр qa_salary_after_3.5_years:
+> pm.test("Проверить, что json response имеет qa_salary_after_3.5_years", function () {
+>    pm.expect(jsonData5).to.have.property("qa_salary_after_3.5_years");
+> });
+### 13. Проверить, что json response имеет параметр person:
+> pm.test("Проверить, что json response имеет person", function () {
+>    pm.expect(jsonData5).to.have.property("person");
+> });
+### 14. Проверить, что параметр start_qa_salary равен salary из request (salary забрать из request.):
+> pm.test("Проверить, что параметр start_qa_salary равен salary из request (salary забрать из request", function () {
+>    pm.expect(jsonData5.start_qa_salary).to.eql(+params.salary);
+> });
+### 15. Проверить, что параметр qa_salary_after_6_months равен salary*2 из request (salary забрать из request.):
+> pm.test("Проверить, что параметр start_qa_salary равен salary из request (salary забрать из request", function () {
+>    pm.expect(jsonData5.start_qa_salary).to.eql(+params.salary);
+> });
+### 16. Проверить, что параметр qa_salary_after_12_months равен salary*2.7 из request (salary забрать из request.):
+> pm.test("Проверить, что параметр qa_salary_after_12_months равен salary*2.7 из request (salary забрать из request", function () {
+>    pm.expect(jsonData5.qa_salary_after_12_months).to.eql(+params.salary*2.7);
+> });
+### 17. Проверить, что параметр qa_salary_after_1.5_year равен salary*3.3 из request (salary забрать из request.):
+> pm.test("Проверить, что параметр qa_salary_after_1.5_year равен salary*3.3 из request (salary забрать из request", function () {
+>     pm.expect(jsonData5['qa_salary_after_1.5_year']).to.eql(+params.salary*3.3);
+> });
+### 18. Проверить, что параметр qa_salary_after_3.5_years равен salary*3.8 из request (salary забрать из request.):
+> pm.test("Проверить, что параметр qa_salary_after_3.5_years равен salary*3.8 из request (salary забрать из request.)", function(){
+>    pm.expect(jsonData5['qa_salary_after_3.5_years']).to.equal(+params.salary*3.8)
+> })
+### 19. Проверить, что в параметре person, 1-й элемент из u_name равен salary из request (salary забрать из request.):
+> pm.test("Проверить, что в параметре person, 1-й элемент из u_name равен salary из request (salary забрать из request.", function() {
+>    pm.expect(jsonData5.person.u_name[1]).to.eql(+params.salary);
+> })
+### 20. Проверить, что что параметр u_age равен age из request (age забрать из request.):
+> pm.test("Проверить, что что параметр u_age равен age из request (age забрать из request.):", function(){ 
+>     pm.expect(jsonData5.person.u_age).to.equal(+params.age)
+> })
+### 21. Проверить, что параметр u_salary_5_years равен salary*4.2 из request (salary забрать из request.):
+> pm.test("Проверить, что параметр u_salary_5_years равен salary*4.2 из request (salary забрать из request.)", function(){
+>    pm.expect(jsonData5.person.u_salary_5_years).to.eql(+params.salary*4.2)
+> });
+### 22. ***Написать цикл который выведет в консоль по порядку элементы списка из параметра person.
+
