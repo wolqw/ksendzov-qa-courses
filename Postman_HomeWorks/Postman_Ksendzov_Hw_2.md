@@ -3,7 +3,7 @@
 > 1. Отправить запрос:
 ##### GET http://162.55.220.72:5005/first
 ##### 2. Статус код 200:
-```javascript
+```Python
 pm.test("Status code is 200", function () {
     pm.response.to.have.status(200);
 });
