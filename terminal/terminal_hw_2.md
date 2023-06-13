@@ -33,7 +33,8 @@ the roses are red
 the violets are blue
 i got some awesome commit
 but can't push it to you
-
+```
+```Python
 9. Через cat добавить в текстовый файл $tf_3.txt строку  “the second 2”:
 $ cat >> tf_3.txt
 the second 2
