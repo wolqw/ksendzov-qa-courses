@@ -1,5 +1,5 @@
  #Юрий Волков 34 Группа @tomkcat#
-```
+```Javascript
 Первая часть первого ДЗ
 Linux terminal (GitBash) commands
 
