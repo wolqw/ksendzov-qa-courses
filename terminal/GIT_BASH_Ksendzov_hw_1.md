@@ -95,4 +95,6 @@ mv fldr_3/file1.txt fldr_3/file5.json fldr_2/
 нажать
 esc
 :wq
+
+
 ```
