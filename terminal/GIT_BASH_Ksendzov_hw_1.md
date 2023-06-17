@@ -4,7 +4,6 @@
 Linux terminal (GitBash) commands
 
 
-
 1) Посмотреть где я
 "pwd" (print working directory)
 2) Создать папку
