@@ -16,7 +16,7 @@ pm.test("Status code is 200", function () {
 > 1. Отправить запрос.
 > POST http://162.55.220.72:5005/user_info_3
 > form-data:
-> name: YurQA
+> name: Yura
 > age: 33
 > salary: 10000
 > 2. Статус код 200.
@@ -26,8 +26,8 @@ pm.test("Status code is 200", function () {
 ### 3. Спарсить response body в json.
 > var respJson = pm.response.json();
 > 4. Проверить, что name в ответе равно name s request (name вбить руками.)
->pm.test("Person name is YurQA", function () {
->  pm.expect(respJson.name).to.eql("YurQA");
+>pm.test("Person name is Yura", function () {
+>  pm.expect(respJson.name).to.eql("Yura");
 > });
 ### 5. Проверить, что age в ответе равно age s request (age вбить руками.)
 > var age = +respJson.age
@@ -65,7 +65,7 @@ pm.test("Status code is 200", function () {
 
 ### http://162.55.220.72:5005/object_info_3
 ### 1. Отправить запрос.
-### GET http://162.55.220.72:5005/object_info_3?name=YurQa&age=33&salary=100000
+### GET http://162.55.220.72:5005/object_info_3?name=Yura&age=33&salary=100000
 ### 2. Статус код 200
 > pm.test("Status code is 200", function () {
 >    pm.response.to.have.status(200);
@@ -112,7 +112,7 @@ pm.test("Status code is 200", function () {
 
 ### http://162.55.220.72:5005/object_info_4
 ### 1. Отправить запрос.
-### GET http://162.55.220.72:5005/object_info_4?name=YurQA&age=33&salary=100000
+### GET http://162.55.220.72:5005/object_info_4?name=Yura&age=33&salary=100000
 > 2. Статус код 200
 > pm.test("Status code is 200", function () {
 >    pm.response.to.have.status(200);
